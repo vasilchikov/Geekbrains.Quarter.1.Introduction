@@ -52,9 +52,10 @@ namespace Lesson3.Task._1
         }
         public static void Task1()
         {
-            Console.Write($"Введите размерность двумерного массива через запятую [y,x]: ");
+            //формируем и выводим исходный двумерный массив:
+            Console.Write($"Введите размерность двумерного массива через запятую [i,j]: ");
             string[] arrStr = Console.ReadLine().Split(',');
-            int[,] arr = new int[int.Parse(arrStr[0]), int.Parse(arrStr[1])];
+            int[,] arr = new int[int.Parse(arrStr[1]), int.Parse(arrStr[0])];
             Random rnd = new Random();
 
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -68,7 +69,7 @@ namespace Lesson3.Task._1
             }
             Console.WriteLine("================================");
 
-            //вывести элементы двумерного массива по диагонали:
+            //выводим элементы двумерного массива по диагонали:
             int x = 0;
             int y = Console.CursorTop; //arr.GetLength(0) + 1;
 
@@ -80,8 +81,25 @@ namespace Lesson3.Task._1
         }
         public static void Task2()
         {
-            //Console.Write("Выполнение метода Task2()");
+            string[,] Phone_dir =
+            {
 
+                {"Иванов","+7-111-111-11-11 / 111@yandex.ru"},
+                {"Петров","+7-222-222-22-22 / 222@yandex.ru"},
+                {"Сидоров", "+7-333-333-33-33 / 333@yandex.ru"},
+                {"Васильчиков","+7-444-444-44-44 / 444@yandex.ru" },
+                {"Кибирев","+7-555-555-55-55 / 555@yandex.ru"}
+            };
+
+            for (int i = 0; i < Phone_dir.GetLength(0); i++)
+            {
+                for (int j = 0; j < Phone_dir.GetLength(1); j++)
+                {
+                    Console.SetCursorPosition(j * 20,i);
+                    Console.Write($"{Phone_dir[i, j]}");
+                }
+                Console.WriteLine();
+            }
         }
         public static void Task3()
         {
