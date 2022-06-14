@@ -103,7 +103,19 @@ namespace Lesson3.Task._1
         }
         static void Task3()
         {
-            
+            string str_v1 = "Строка в исходном состоянии";
+            Console.WriteLine($"{RevertStr(str_v1)}");
+            static string RevertStr(string str)
+            {
+                char[] res = new char[str.Length];
+                int count = str.Length-1;
+                foreach (char s in str)
+                {
+                    res.SetValue(s, count);
+                    count--;
+                }
+                return new string(res);
+            }
         }
     }
 }
