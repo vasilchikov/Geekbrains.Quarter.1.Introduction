@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Lesson._4.lecture.Sample03</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Sample01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample02.cs" />
+    <Compile Include="Sample03.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
