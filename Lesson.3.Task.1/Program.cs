@@ -4,7 +4,7 @@ namespace Lesson3.Task._1
 {
     internal class Program
     {
-        public delegate void Message();
+        delegate void Message();
         static Message mes;
         static void Main(string[] args)
         {
@@ -50,7 +50,7 @@ namespace Lesson3.Task._1
             Console.ReadKey(true);
             mes = null;
         }
-        public static void Task1()
+        static void Task1()
         {
             //формируем и выводим исходный двумерный массив:
             Console.Write($"Введите размерность двумерного массива через запятую [i,j]: ");
@@ -79,7 +79,7 @@ namespace Lesson3.Task._1
                 Console.Write(i);
             }
         }
-        public static void Task2()
+        static void Task2()
         {
             string[,] Phone_dir =
             {
@@ -101,9 +101,9 @@ namespace Lesson3.Task._1
                 Console.WriteLine();
             }
         }
-        public static void Task3()
+        static void Task3()
         {
-            Console.Write("Выполнение метода Task3()");
+            
         }
     }
 }
