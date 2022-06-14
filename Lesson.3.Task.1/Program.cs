@@ -103,8 +103,9 @@ namespace Lesson3.Task._1
         }
         static void Task3()
         {
-            string str_v1 = "Строка в исходном состоянии";
-            Console.WriteLine($"{RevertStr(str_v1)}");
+            string str_v1 = "МАССИВ СИМВОЛОВ C#";
+            Console.WriteLine($"Строка в исходном состоянии: {str_v1}");
+            Console.WriteLine($"В обратном направлении: {RevertStr(str_v1)}");
             static string RevertStr(string str)
             {
                 char[] res = new char[str.Length];
